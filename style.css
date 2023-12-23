@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.map {
+    margin: auto;
+    width: 1822px;
+    height: 956px;
+    background-image: url(images/harita.png);
+    position: relative;
+}
