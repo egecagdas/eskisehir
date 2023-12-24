@@ -3,7 +3,28 @@
 <script src="script.js"></script>
 
 <div class="map">
-    <img class="pin" id="pin1" onclick="" />
+    <img class="pin" id="pin1" onclick="showModal()" />
+    <div class="modal" id="modal1">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="img-comp-img">
+                <img
+                    src="images/streets/new/1-hamamyolu cad. arifiye mah. (yeni).jpg"
+                    width="300"
+                    height="200"
+                />
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+                <img
+                    src="images/streets/old/1-hamamyolucad.-arifiye mah.(1930).jpg"
+                    width="300"
+                    height="200"
+                />
+            </div>
+        </div>
+        <div id="caption"></div>
+    </div>
+
     <img class="pin" id="pin2" onclick="" />
     <img class="pin" id="pin3" onclick="" />
     <img class="pin" id="pin4" onclick="" />
