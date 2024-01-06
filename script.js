@@ -20,14 +20,16 @@ window.onload = function (e) {
 
 function randomizePins() {
     for (i = 2; i <= 30; i++) {
-        var pin = document.getElementById("pin" + i);
+        var pin = document.getElementById("pin_" + i);
         pin.style.left = Math.floor(Math.random() * 1822);
         pin.style.top = Math.floor(Math.random() * 956);
     }
 }
 
+function pinClicked(pinId) {}
+
 function showModal() {
-    var modal = document.getElementById("modal1");
+    var modal = document.getElementById("modal");
     modal.style.display = "block";
 
     if (!comparisonsInitialized) {
@@ -39,7 +41,7 @@ function showModal() {
 }
 
 function closeModal() {
-    var modal = document.getElementById("modal1");
+    var modal = document.getElementById("modal");
     modal.style.display = "none";
 }
 
