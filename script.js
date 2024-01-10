@@ -26,7 +26,18 @@ function randomizePins() {
     }
 }
 
-function pinClicked(pinId) {}
+function pinClicked(pinId) {
+    changePinImagesByPinNumber(pinId.split("_")[1]);
+    showModal();
+}
+
+function changePinImagesByPinNumber(pinNumber) {
+    leftImg = document.getElementById("compare-left");
+    rightImg = document.getElementById("compare-right");
+
+    leftImg.src = "images/streets/new/" + pinNumber + ".jpg";
+    rightImg.src = "images/streets/old/" + pinNumber + ".jpg";
+}
 
 function showModal() {
     var modal = document.getElementById("modal");
