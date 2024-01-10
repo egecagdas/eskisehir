@@ -20,14 +20,27 @@ window.onload = function (e) {
 
 function randomizePins() {
     for (i = 2; i <= 30; i++) {
-        var pin = document.getElementById("pin" + i);
+        var pin = document.getElementById("pin_" + i);
         pin.style.left = Math.floor(Math.random() * 1822);
         pin.style.top = Math.floor(Math.random() * 956);
     }
 }
 
+function pinClicked(pinId) {
+    changePinImagesByPinNumber(pinId.split("_")[1]);
+    showModal();
+}
+
+function changePinImagesByPinNumber(pinNumber) {
+    leftImg = document.getElementById("compare-left");
+    rightImg = document.getElementById("compare-right");
+
+    leftImg.src = "images/streets/new/" + pinNumber + ".jpg";
+    rightImg.src = "images/streets/old/" + pinNumber + ".jpg";
+}
+
 function showModal() {
-    var modal = document.getElementById("modal1");
+    var modal = document.getElementById("modal");
     modal.style.display = "block";
 
     if (!comparisonsInitialized) {
@@ -39,7 +52,7 @@ function showModal() {
 }
 
 function closeModal() {
-    var modal = document.getElementById("modal1");
+    var modal = document.getElementById("modal");
     modal.style.display = "none";
 }
 
