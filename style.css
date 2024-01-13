@@ -6,10 +6,15 @@
 
 .map {
     margin: auto;
-    width: 1822px;
-    height: 956px;
-    background-image: url(images/harita.png);
+    margin-top: 5%;
+    width: 1733px;
+    height: 1058px;
+    background-image: url(images/eskisehir.png);
     position: relative;
+    border-radius: 15px;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
 }
 
 .modal {
